@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import image from "../../../assets/img/shape/content.png";
 import bannerVideo from "../../../assets/img/banner/banner.mp4";
+import poster from "../../../assets/img/banner/banner.jpg";
 import brand1 from "../../../assets/img/brand/brand-1.png";
 import brand2 from "../../../assets/img/brand/brand-2.png";
 import brand3 from "../../../assets/img/brand/brand-3.png";
@@ -12,13 +13,40 @@ import brand7 from "../../../assets/img/brand/brand-7.png";
 import brand8 from "../../../assets/img/brand/brand-8.png";
 
 const BannerFour = () => {
+    const videoRef = useRef(null);
+    const [showVideo, setShowVideo] = useState(true);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth < 480) {
+            setShowVideo(false);
+            return;
+        }
+
+        const vid = videoRef.current;
+        if (!vid) {
+            setShowVideo(false);
+            return;
+        }
+
+        const playPromise = vid.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => setShowVideo(false));
+        }
+
+        const onError = () => setShowVideo(false);
+        vid.addEventListener('error', onError);
+        return () => vid.removeEventListener('error', onError);
+    }, []);
+
     return (
-        <div className="banner__four">
-            <div className="bg-video">
-                <video autoPlay muted loop playsInline preload="auto">
-                    <source src={bannerVideo} type="video/mp4" />
-                </video>
-            </div>
+        <div className="banner__four" style={!showVideo ? { backgroundImage: `url(${poster})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}>
+            {showVideo && (
+                <div className="bg-video">
+                    <video ref={videoRef} autoPlay muted loop playsInline preload="auto" poster={poster} aria-hidden="true">
+                        <source src={bannerVideo} type="video/mp4" />
+                    </video>
+                </div>
+            )}
             <div className="container">
                 <div className="row">
                     <div className="col-xl-12">
