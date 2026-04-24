@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import image from "../../../assets/img/shape/content.png";
+import bannerVideo from "../../../assets/img/banner/banner.mp4";
 import brand1 from "../../../assets/img/brand/brand-1.png";
 import brand2 from "../../../assets/img/brand/brand-2.png";
 import brand3 from "../../../assets/img/brand/brand-3.png";
@@ -14,8 +15,8 @@ const BannerFour = () => {
     return (
         <div className="banner__four">
             <div className="bg-video">
-                <video autoPlay muted loop playsInline>
-                    <source src="https://buildgo-react.vercel.app/static/media/banner.b1e80eca5dee07cccccd.mp4" type="video/mp4" />
+                <video autoPlay muted loop playsInline preload="auto">
+                    <source src={bannerVideo} type="video/mp4" />
                 </video>
             </div>
             <div className="container">
