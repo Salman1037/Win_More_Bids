@@ -1,0 +1,12 @@
+.banner__four-brand{display:flex;align-items:center;gap:24px;padding:1rem 0}
+.banner__four-brand .title{flex:0 0 auto}
+.banner__four-brand .title h4{margin:0;font-size:1.15rem}
+.trust-stats{display:flex;flex:1 1 auto;gap:1rem;flex-wrap:nowrap;justify-content:space-between;align-items:stretch;overflow-x:auto;padding-left:8px}
+.trust-stats .stat{flex:0 0 220px;padding:1rem;background:var(--card-bg, #fff);border:1px solid rgba(0,0,0,0.06);border-radius:8px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
+.trust-stats .stat-number{font-size:2rem;font-weight:700;color:var(--primary-color-1)}
+.trust-stats .stat-label{font-size:.95rem;color:var(--muted-color, #666)}
+/* make sure small screens can scroll horizontally */
+@media (max-width: 768px){
+  .trust-stats{gap:.75rem}
+  .trust-stats .stat{flex:0 0 180px}
+}

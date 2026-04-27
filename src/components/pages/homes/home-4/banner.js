@@ -3,14 +3,56 @@ import { Link } from 'react-router-dom';
 import image from "../../../assets/img/shape/content.png";
 import bannerVideo from "../../../assets/img/banner/banner.mp4";
 import poster from "../../../assets/img/banner/banner.jpg";
-import brand1 from "../../../assets/img/brand/brand-1.png";
-import brand2 from "../../../assets/img/brand/brand-2.png";
-import brand3 from "../../../assets/img/brand/brand-3.png";
-import brand4 from "../../../assets/img/brand/brand-4.png";
-import brand5 from "../../../assets/img/brand/brand-5.png";
-import brand6 from "../../../assets/img/brand/brand-6.png";
-import brand7 from "../../../assets/img/brand/brand-7.png";
-import brand8 from "../../../assets/img/brand/brand-8.png";
+// brand image imports removed — replaced by stats/trust bar
+import './banner.css';
+
+const CountUp = ({ end = 0, duration = 1400, format = 'int', suffix = '' }) => {
+    const ref = React.useRef(null);
+    const [display, setDisplay] = React.useState('0');
+    const started = React.useRef(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const onIntersect = (entries, io) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !started.current) {
+                    started.current = true;
+                    const start = performance.now();
+                    const from = 0;
+
+                    const step = (now) => {
+                        const t = Math.min(1, (now - start) / duration);
+                        const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOut
+                        const value = from + (end - from) * eased;
+
+                        // formatting
+                        let out = '';
+                        if (format === 'percent') out = Math.round(value) + '%';
+                        else if (format === 'one-decimal') out = value.toFixed(1) + suffix;
+                        else if (format === 'kplus') {
+                            const k = Math.round(value / 1000);
+                            out = k + 'K+';
+                        } else out = Math.round(value).toString() + suffix;
+
+                        setDisplay(out);
+                        if (t < 1) requestAnimationFrame(step);
+                    };
+
+                    requestAnimationFrame(step);
+                    io.disconnect();
+                }
+            });
+        };
+
+        const io = new IntersectionObserver(onIntersect, { threshold: 0.3 });
+        io.observe(el);
+        return () => io.disconnect();
+    }, [end, duration, format, suffix]);
+
+    return <div ref={ref} className="stat-number">{display}</div>;
+};
 
 const BannerFour = () => {
     const videoRef = useRef(null);
@@ -70,32 +112,22 @@ const BannerFour = () => {
                             <div className="title">
                                 <h4>Trusted by Contractors</h4>
                             </div>
-                            <div className="scroll__slider">
-                                <div className="text-slide">
-                                    <div className="sliders text_scroll">
-                                        <ul>
-                                            <li><img src={brand1} alt="image" /></li>
-                                            <li><img src={brand2} alt="image" /></li>
-                                            <li><img src={brand3} alt="image" /></li>
-                                            <li><img src={brand4} alt="image" /></li>
-                                            <li><img src={brand5} alt="image" /></li>
-                                            <li><img src={brand6} alt="image" /></li>
-                                            <li><img src={brand7} alt="image" /></li>
-                                            <li><img src={brand8} alt="image" /></li>
-                                        </ul>
-                                    </div>
-                                    <div className="sliders text_scroll">
-                                        <ul>
-                                            <li><img src={brand1} alt="image" /></li>
-                                            <li><img src={brand2} alt="image" /></li>
-                                            <li><img src={brand3} alt="image" /></li>
-                                            <li><img src={brand4} alt="image" /></li>
-                                            <li><img src={brand5} alt="image" /></li>
-                                            <li><img src={brand6} alt="image" /></li>
-                                            <li><img src={brand7} alt="image" /></li>
-                                            <li><img src={brand8} alt="image" /></li>
-                                        </ul>
-                                    </div>
+                            <div className="trust-stats">
+                                <div className="stat">
+                                    <CountUp end={12000} format="kplus" duration={1400} />
+                                    <div className="stat-label">Projects Estimated</div>
+                                </div>
+                                <div className="stat">
+                                    <CountUp end={78} format="percent" duration={1200} />
+                                    <div className="stat-label">Average Bid Win Rate</div>
+                                </div>
+                                <div className="stat">
+                                    <CountUp end={4.9} format="one-decimal" suffix="/5" duration={1200} />
+                                    <div className="stat-label">Average Contractor Rating</div>
+                                </div>
+                                <div className="stat">
+                                    <CountUp end={98} format="percent" duration={1200} />
+                                    <div className="stat-label">Support Satisfaction</div>
                                 </div>
                             </div>
                         </div>
