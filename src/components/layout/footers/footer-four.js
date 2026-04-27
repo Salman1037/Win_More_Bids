@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import logo1 from "../../assets/img/logo-3.png";
-import logo2 from "../../assets/img/logo-2.png";
+// import logo2 from "../../assets/img/logo-2.png";
 import subscribeBg from "../../assets/img/page/subscribe.jpg";
 import Social from '../../data/social';
 
@@ -32,7 +32,7 @@ const FooterFour = () => {
                                 <div className="row">
                                     <div className="col-lg-4 col-sm-6">
                                         <div className="footer__four-widget mr-40">
-                                            <Link className="logo" to="/"><img className='dark-n' src={logo1} alt="image" /><img className='light-n' src={logo2} alt="image" /></Link>
+                                            <Link className="logo" to="/"><img className='dark-n' src={logo1} alt="image" /></Link>
                                             <h5>We’re Solutions for all construction</h5>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@ const FooterFour = () => {
                     <div className="row al-center">
                         <div className="col-md-7">
                             <div className="copyright__area-content md-t-center md-mb-10">
-                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://hiredbillingsupport.com/" target="_blank" rel="noopener noreferrer">Hiredbilling Support</a></p>
+                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://99estimators.com/" target="_blank" rel="noopener noreferrer">99 Estimators</a></p>
                             </div>
                         </div>
                         <div className="col-md-5">

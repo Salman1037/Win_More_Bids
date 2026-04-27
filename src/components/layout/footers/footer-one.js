@@ -77,7 +77,7 @@ const FooterOne = () => {
                     <div className="row al-center">
                         <div className="col-md-7">
                                 <div className="copyright__area-content md-t-center md-mb-10">
-                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://hiredbillingsupport.com/" target="_blank" rel="noopener noreferrer">Hiredbilling Support</a></p>
+                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://99estimators.com/" target="_blank" rel="noopener noreferrer">99 Estimators</a></p>
                             </div>
                         </div>
                         <div className="col-md-5">

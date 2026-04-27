@@ -91,7 +91,7 @@ const FooterTwo = () => {
                     <div className="row">
                         <div className="col-lg-12">
                                 <div className="copyright__area-content t-center">
-                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://hiredbillingsupport.com/" target="_blank" rel="noopener noreferrer">Hiredbilling Support</a></p>
+                                <p>Copyright {new Date().getFullYear()} – All Rights Reserved By <a href="https://99estimators.com/" target="_blank" rel="noopener noreferrer">99 Estimators</a></p>
                             </div>
                         </div>
                     </div>
