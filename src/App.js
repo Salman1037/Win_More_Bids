@@ -18,6 +18,7 @@ import PortfolioFourColumns from './components/pages/portfolio/4-columns';
 import BlogGrid from './components/pages/blogs/blog';
 import { useEffect } from 'react';
 import ScrollToTop from './components/pages/common/scroll/scroll-to-top';
+import RouteScrollToTop from './components/pages/common/scroll/route-scroll-to-top';
 import { animationCreate } from '.';
 import CustomCursor from './components/pages/common/cursor';
 // import SwitchTab from './components/pages/common/dark-light';
@@ -39,7 +40,9 @@ function App() {
         <>
             <CustomCursor />
             {/* <SwitchTab /> */}
-            <Router><Routes>
+            <Router>
+                <RouteScrollToTop />
+                <Routes>
                 <Route path="/" element={<HomeFour />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/history" element={<History />} />
@@ -64,7 +67,8 @@ function App() {
                 <Route path="/blog-standard" element={<BlogStandardPage />} />
                 <Route path="/blog/:id" element={<BlogDetails />} />
                 <Route path="/contact-us" element={<ContactUs />} />
-            </Routes></Router>
+                </Routes>
+            </Router>
             <ScrollToTop />
         </>
     )

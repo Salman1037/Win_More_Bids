@@ -1,0 +1,13 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const RouteScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        // instant scroll to top on route change
+        window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+};
+
+export default RouteScrollToTop;

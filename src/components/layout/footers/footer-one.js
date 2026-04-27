@@ -81,9 +81,9 @@ const FooterOne = () => {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <div className="copyright__area-social t-right md-t-center">
+                            {/* <div className="copyright__area-social t-right md-t-center">
                                 <Social />						
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
