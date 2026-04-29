@@ -2,7 +2,7 @@ import SEO from "../../data/seo";
 import FooterOne from "../../layout/footers/footer-one";
 import HeaderTwo from "../../layout/headers/header-two";
 import BreadCrumb from "../common/breadcrumb";
-import contactBanner from "../../assets/img/banner/service-2.png";
+import contactBanner from "../../assets/img/banner/service-2.webp";
 import ContactMain from "./contact";
 
 const ContactUs = () => {

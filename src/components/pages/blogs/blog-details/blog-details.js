@@ -9,7 +9,7 @@ import image1 from '../../../assets/img/about/about-1.jpg';
 import image2 from '../../../assets/img/page/choose-us.jpg';
 import FormArea from '../../contacts/form';
 import BreadCrumb from "../../common/breadcrumb";
-import blogBanner from "../../../assets/img/banner/blog.png"; // Use any image you want
+import blogBanner from "../../../assets/img/banner/blog.webp"; // Use any image you want
 
 const BlogSingleMain = ({singleData}) => {
     const blogPost = blogData.slice(0, 3);

@@ -1,7 +1,7 @@
 import SEO from "../../data/seo";
 import HeaderTwo from "../../layout/headers/header-two";
 import BreadCrumb from "../common/breadcrumb";
-import faqBanner from "../../assets/img/banner/service-3.png";
+import faqBanner from "../../assets/img/banner/service-3.webp";
 import FaqArea from "./faq"; 
 import FooterOne from "../../layout/footers/footer-one";
 

@@ -1,7 +1,7 @@
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
 import BreadCrumb from "../../common/breadcrumb";
-import blogBanner from "../../../assets/img/banner/blog.png";
+import blogBanner from "../../../assets/img/banner/blog.webp";
 import BlogGridMain from "./blog-grid";
 import FooterOne from "../../../layout/footers/footer-one";
 

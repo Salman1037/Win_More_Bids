@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import BreadCrumb from "../../common/breadcrumb";
-import serviceBanner from "../../../assets/img/banner/service-3.png";
+import serviceBanner from "../../../assets/img/banner/service-3.webp";
 import ServicesSingleMain from "./services-single";
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
