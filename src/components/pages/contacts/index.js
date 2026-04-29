@@ -2,6 +2,7 @@ import SEO from "../../data/seo";
 import FooterOne from "../../layout/footers/footer-one";
 import HeaderTwo from "../../layout/headers/header-two";
 import BreadCrumb from "../common/breadcrumb";
+import contactBanner from "../../assets/img/banner/service-2.png";
 import ContactMain from "./contact";
 
 const ContactUs = () => {
@@ -9,7 +10,7 @@ const ContactUs = () => {
         <>
             <SEO pageTitle="Contact Us" />
             <HeaderTwo />
-            <BreadCrumb title="Contact Us" innerTitle="Contact Us" />
+            <BreadCrumb title="Contact Us" innerTitle="Contact Us" bgImage={contactBanner} />
             <ContactMain />
             <div className="map section-padding pt-0">
                 <div className="container">

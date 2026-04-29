@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import BreadCrumb from "../../common/breadcrumb";
+import portfolioDetailsBanner from "../../../assets/img/banner/banner.jpg";
 import PortfolioDetailsMain from "./portfolio-details";
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
@@ -24,7 +25,7 @@ const PortfolioDetails = () => {
         <>
             <SEO pageTitle={singleData?.title} />
             <HeaderTwo />
-            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} />
+            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} bgImage={portfolioDetailsBanner} />
             <PortfolioDetailsMain singleData={singleData}/>
             <FooterOne />
         </>

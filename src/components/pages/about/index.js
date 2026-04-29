@@ -1,4 +1,5 @@
 import BreadCrumb from "../common/breadcrumb";
+import aboutBanner from "../../assets/img/banner/banner.jpg";
 import SEO from "../../data/seo";
 import HeaderTwo from "../../layout/headers/header-two";
 import AboutMain from "./about";
@@ -12,7 +13,7 @@ const AboutUs = () => {
         <>
             <SEO pageTitle="About Us" />
             <HeaderTwo />
-            <BreadCrumb title="About Us" innerTitle="About Us" />
+            <BreadCrumb title="About Us" innerTitle="About Us" bgImage={aboutBanner} />
             <AboutMain />
             <Video />
             <Certification />

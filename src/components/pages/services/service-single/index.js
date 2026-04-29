@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import BreadCrumb from "../../common/breadcrumb";
+import serviceBanner from "../../../assets/img/banner/service-3.png";
 import ServicesSingleMain from "./services-single";
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
@@ -24,7 +25,7 @@ const ServicesDetails = () => {
         <>
             <SEO pageTitle={singleData?.title} />
             <HeaderTwo />
-            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} />
+            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} bgImage={serviceBanner} />
             <ServicesSingleMain singleData={singleData}/>
             <FooterOne />
         </>

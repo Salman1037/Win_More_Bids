@@ -1,6 +1,7 @@
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
 import BreadCrumb from "../../common/breadcrumb";
+import blogBanner from "../../../assets/img/banner/blog.png";
 import BlogGridMain from "./blog-grid";
 import FooterOne from "../../../layout/footers/footer-one";
 
@@ -10,7 +11,7 @@ const BlogGrid = () => {
         <>
             <SEO pageTitle="Blog Grid" />
             <HeaderTwo />
-            <BreadCrumb title="Blog Grid" innerTitle="Blog Grid" />
+            <BreadCrumb title="Blog Grid" innerTitle="Blog Grid" bgImage={blogBanner} />
             <BlogGridMain />
             <FooterOne />
         </>

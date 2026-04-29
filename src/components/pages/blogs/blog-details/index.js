@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import BlogSingleMain from "./blog-details";
 import BreadCrumb from "../../common/breadcrumb";
+import blogDetailsBanner from "../../../assets/img/banner/blog.png";
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
 import FooterOne from "../../../layout/footers/footer-one";
@@ -24,7 +25,7 @@ const BlogDetails = () => {
         <>
             <SEO pageTitle={singleData?.title} />
             <HeaderTwo />
-            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} />
+            <BreadCrumb title={firstThreeWords} innerTitle={singleData?.title} bgImage={blogDetailsBanner} />
             <BlogSingleMain singleData={singleData}/>
             <FooterOne />
         </>

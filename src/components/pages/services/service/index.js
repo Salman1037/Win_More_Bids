@@ -1,6 +1,7 @@
 import SEO from "../../../data/seo";
 import HeaderTwo from "../../../layout/headers/header-two";
 import BreadCrumb from "../../common/breadcrumb";
+import servicesBanner from "../../../assets/img/banner/Services.png";
 import ServicesMain from "./services";
 import FooterOne from "../../../layout/footers/footer-one";
 
@@ -9,7 +10,7 @@ const ServicePage = () => {
         <>
             <SEO pageTitle="Services" />
             <HeaderTwo />
-            <BreadCrumb title="Services" innerTitle="Services" />
+            <BreadCrumb title="Services" innerTitle="Services" bgImage={servicesBanner} />
             <ServicesMain />
             <FooterOne />
         </>

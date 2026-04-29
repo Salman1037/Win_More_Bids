@@ -8,6 +8,8 @@ import avatar3 from '../../../assets/img/team/member-1.jpg';
 import image1 from '../../../assets/img/about/about-1.jpg';
 import image2 from '../../../assets/img/page/choose-us.jpg';
 import FormArea from '../../contacts/form';
+import BreadCrumb from "../../common/breadcrumb";
+import blogBanner from "../../../assets/img/banner/blog.png"; // Use any image you want
 
 const BlogSingleMain = ({singleData}) => {
     const blogPost = blogData.slice(0, 3);
@@ -28,7 +30,7 @@ const BlogSingleMain = ({singleData}) => {
                             <div className="blog__details-area-box">
                                 <i className="fas fa-quote-right"></i>
                                 <div>
-                                    <h6>This article sheds light on important industry trends, offering valuable strategies for navigating construction challenges effectively</h6>                                
+                                    <h6>This article sheds light on important industry trends, offering valuable strategies for navigating construction challenges effectively</h6>                                        
                                     <span>Sarah L - Project Coordinator</span>
                                 </div>
                             </div>
@@ -111,6 +113,9 @@ const BlogSingleMain = ({singleData}) => {
                 </div>
             </div>
         </div>
+        <>
+        <BreadCrumb title="Blog Details" innerTitle="Blog Details" bgImage={blogBanner} />
+        </>
         </>
     );
 };
