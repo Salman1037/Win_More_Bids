@@ -43,9 +43,9 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                         </div>
                     </div>
                 </div>
-                <div className="header__area-menubar-right-sidebar-popup-social">
+                {/* <div className="header__area-menubar-right-sidebar-popup-social">
                     <Social />							
-                </div>
+                </div> */}
             </div>
             <div className={`sidebar-overlay ${isOpen ? 'show' : ''}`}></div>
         </>

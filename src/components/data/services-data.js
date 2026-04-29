@@ -306,7 +306,7 @@ const servicesData = [
         featured: false,
         active: true,
         number: 6,
-        image: image6,
+        image: image1,
         seo: {title: 'Estimator-as-a-Service — Win Bids Co', description: 'On-demand estimators and scoped estimating teams to meet peak bidding needs.', keywords: ['estimator-as-a-service','estimators']}
     }
 ];
